@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thu cũ đổi mới</title>
+    <link rel="stylesheet" href="tcdm.css" />
+  </head>
+  <body>
+    <div id="header-placeholder"></div>
+
+    <script>
+      fetch("header.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("header-placeholder").innerHTML = data;
+        })
+        .catch((error) => console.error("Lỗi tải header:", error));
+    </script>
+    <main>
+      <div class="container">
+        <h2>Thu cũ đổi mới</h2>
+        <p>Gửi thông tin điện thoại cũ của bạn để được định giá và đổi mới!</p>
+        <form>
+          <label for="name">Họ và tên:</label>
+          <input type="text" id="name" required />
+
+          <label for="phone">Số điện thoại:</label>
+          <input type="tel" id="phone" required />
+
+          <label for="device">Mẫu điện thoại cũ:</label>
+          <input type="text" id="device" required />
+
+          <label for="image">Tải lên ảnh điện thoại:</label>
+          <input type="file" id="image" accept="image/*" />
+
+          <button type="submit">Gửi thông tin</button>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>

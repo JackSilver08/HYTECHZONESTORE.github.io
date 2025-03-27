@@ -1,0 +1,48 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+header {
+  background-color: #276ad5;
+  color: white;
+  padding: 20px;
+}
+
+.discount-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px;
+}
+
+.discount-box {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  padding: 15px;
+  margin: 10px;
+  text-align: left;
+}
+
+.discount-box h2 {
+  color: #00d5ff;
+}
+
+.discount-box span {
+  display: block;
+  font-size: 14px;
+  color: gray;
+  margin-top: 5px;
+}
+
+footer {
+  background: #601fe1;
+  color: white;
+  padding: 10px;
+  margin-top: 20px;
+}

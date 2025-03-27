@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hytechzone</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="code.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1>HYTECHZONE</h1>
+      <div class="category-container">
+        <button class="category-btn">
+          <i class="fas fa-bars"></i> Danh mục
+        </button>
+        <ul class="submenu">
+          <li><a href="#">Máy tính để bàn</a></li>
+          <li><a href="#">Laptop</a></li>
+          <li><a href="#">Điện thoại</a></li>
+          <li><a href="#">Máy ảnh cơ</a></li>
+          <li><a href="#">Camera an ninh</a></li>
+        </ul>
+      </div>
+      
+        <div class="search-box">
+          <input type="text" placeholder="Tìm kiếm" />
+          <i class="fas fa-search"></i>
+        </div>
+      </div>
+
+      <div class="hotline" style="text-align: center">
+        <a
+          href="http://127.0.0.1:5500/asm2/index.html"
+          style="text-decoration: none"
+          >Trang chủ</a
+        >
+      </div>
+      <div class="hotline" style="text-align: center">
+        <a href="indexGT.html" style="text-decoration: none">Giới thiệu</a>
+      </div>
+
+      <div class="hotline" style="text-align: center">
+        <i class="fas fa-phone"></i> Gọi mua hàng: 0783296329
+      </div>
+
+      <div class="hotline" style="text-align: center">Tra cứu đơn hàng</div>
+      <button class="cart" style="text-align: center">
+        <i class="fas fa-shopping-cart"></i> Giỏ hàng
+      </button>
+      <div  class="hotline" style="text-align: center;background-image:url(https://www.canva.com/design/DAGbZNTiwno/T8GSRHAUnZmoFeQSqad-kw/edit?utm_content=DAGbZNTiwno&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton);">
+      <a href="dangnhap.html"><button class="account"><i class="fas fa-user"></i></button></a>
+    </div>
+    </header>
+
+    <div class="container">
+      <div class="main">
+        <div class="sidebar">
+          <h3 style="color: rgb(30, 117, 210)">Dịch vụ khác</h3>
+          <ul class="menu">
+            <li>
+              <a href="indexLienHe.html" style="text-decoration: none"
+                >Tin tức công nghệ</a
+              >
+            </li>
+            <li>
+              <a href="indexTTGG.html" style="text-decoration: none"
+                >Thông tin giảm giá</a
+              >
+            </li>
+            <li>
+              <a href="indexDGSS.html" style="text-decoration: none"
+                >Đánh giá sản phẩm</a
+              >
+            </li>
+            <li>
+              <a href="indexHTTV.html" style="text-decoration: none"
+                >Hỗ trợ & tư vấn</a
+              >
+            </li>
+            <li>
+              <a href="indexDDCN.html" style="text-decoration: none"
+                >Diễn đàn công nghệ</a
+              >
+            </li>
+            <li>
+              <a href="indexbuildPC.html" style="text-decoration: none"
+                >Build PC tại nhà</a
+              >
+            </li>
+            <li>
+              <a href="thucudoimoi.html" style="text-decoration: none"
+                >Thu cũ đổi mới</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="slider">
+          <div class="slides">
+            <img src="img/iphone 16.jpg" alt="iPhone 16" />
+            <img src="img/s25 ultra.jpg" alt="Samsung S25 Ultra" width="95" />
+            <img src="img/google pixel 8.jpg" alt="Google Pixel 8" />
+            <img src="img/poco x6.jpg" alt="pocox6" />
+            <img src="img/realmi t13.jpg" alt="rielme" />
+            <img src="img/ss a02.jpg" alt="dienthoai" />
+            <img src="img/A56.PNG" alt="56A" />
+            <img src="img/techno spark.PNG" alt="techno" />
+          </div>
+          <div class="dots">
+            <span class="dot active" onclick="goToSlide(0)"></span>
+            <span class="dot" onclick="goToSlide(1)"></span>
+            <span class="dot" onclick="goToSlide(2)"></span>
+          </div>
+        </div>
+
+        <div class="ads">
+          <img src="img/ad1.PNG" alt="Ad 1" />
+          <img src="img/ad2.PNG" alt="Ad 2" />
+          <img src="img/ad3.PNG" alt="Ad 2" />
+          <img src="img/Lenovo Apad ad4.PNG" alt="ad 2"/>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let currentIndex = 0;
+      const slides = document.querySelector(".slides");
+      const dots = document.querySelectorAll(".dot");
+
+      function goToSlide(index) {
+        currentIndex = index;
+        updateSlider();
+      }
+
+      function updateSlider() {
+        slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+        dots.forEach((dot) => dot.classList.remove("active"));
+        dots[currentIndex].classList.add("active");
+      }
+
+      setInterval(() => {
+        currentIndex = (currentIndex + 1) % dots.length;
+        updateSlider();
+      }, 3000);
+    </script>
+    <section class="product-section">
+      <h2 style="color: aliceblue">ĐIỆN THOẠI NỔI BẬT NHẤT</h2>
+      <div class="filter-buttons">
+        <button>Apple</button>
+        <button>Samsung</button>
+        <button>Xiaomi</button>
+        <button>OPPO</button>
+        <button>vivo</button>
+        <button>realme</button>
+        <button>ASUS</button>
+        <button>TECNO</button>
+        <button>Nokia</button>
+        <button>Infinix</button>
+        <button>Nothing</button>
+        <button>Xem tất cả</button>
+      </div>
+
+      <div class="product-list">
+        <!-- Sản phẩm 1 -->
+        <div class="product">
+          <div class="discount">Giảm 11%</div>
+          <img src="img/iphone 16 sanpham.webp" alt="iPhone 16 Pro Max" />
+          <h3>iPhone 16 Pro Max 256GB | Chính hãng VN/A</h3>
+          <p class="price">
+            <span class="current-price">30.990.000đ</span>
+            <span class="old-price">34.990.000đ</span>
+          </p>
+          <p class="installment">Trả góp 0%</p>
+          <p class="info">
+            Không phí chuyển đổi khi trả góp 0% qua thẻ tín dụng
+          </p>
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+          <button class="wishlist">
+            <i class="fas fa-heart"></i> Yêu thích
+          </button>
+        </div>
+
+        <!-- Sản phẩm 2 -->
+        <div class="product">
+          <div class="discount">Giảm 13%</div>
+          <img
+            src="img/samsung s25 ultra sanpham.png"
+            alt="Samsung S25 Ultra"
+          />
+          <h3>Samsung Galaxy S25 Ultra 12GB 256GB</h3>
+          <p class="price">
+            <span class="current-price">29.490.000đ</span>
+            <span class="old-price">33.990.000đ</span>
+          </p>
+          <p class="installment">Trả góp 0%</p>
+          <p class="info">HyTech-Student giảm thêm đến <b>600.000đ</b></p>
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+          <button class="wishlist">
+            <i class="fas fa-heart"></i> Yêu thích
+          </button>
+        </div>
+        <div class="product">
+          <div class="discount">Giảm 13%</div>
+          <img src="img/techno spark 20 sanpham.jpg" alt="technospark" />
+          <h3>Techno Spark 20 16Gb 256GB</h3>
+          <p class="price">
+            <span class="current-price">5.490.000đ</span>
+            <span class="old-price">33.990.000đ</span>
+          </p>
+          <p class="installment">Trả góp 0%</p>
+          <p class="info">HyTech-Student giảm thêm đến <b>600.000đ</b></p>
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+          <button class="wishlist">
+            <i class="fas fa-heart"></i> Yêu thích
+          </button>
+        </div>
+        <div class="product">
+          <div class="discount">Giảm 13%</div>
+          <img src="img/poco sanpham.jpg" alt="Poco x6" />
+          <h3>Poco X6 8Gb 128Gb</h3>
+          <p class="price">
+            <span class="current-price">7.890.000đ</span>
+            <span class="old-price">13.000.000đ</span>
+          </p>
+          <p class="installment">Trả góp 0%</p>
+          <p class="info">HyTech-Student giảm thêm đến <b>600.000đ</b></p>
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+          <button class="wishlist">
+            <i class="fas fa-heart"></i> Yêu thích
+          </button>
+        </div>
+        <div class="product">
+          <div class="discount">Giảm 13%</div>
+          <img src="img/Lenovo Y70.jpg" alt="Lenovo Y70" />
+          <h3>Lenovo Y70 12GB 256GB</h3>
+          <p class="price">
+            <span class="current-price">9.490.000đ</span>
+            <span class="old-price">13.990.000đ</span>
+          </p>
+          <p class="installment">Trả góp 0%</p>
+          <p class="info">HyTech-Student giảm thêm đến <b>600.000đ</b></p>
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+          <button class="wishlist">
+            <i class="fas fa-heart"></i> Yêu thích
+          </button>
+        </div>
+        <div class="product">
+          <div class="discount">Giảm 13%</div>
+          <img src="img/sss24 sanpham.jpg" alt="Samsung S25 Ultra" />
+          <h3>Samsung Galaxy S24 Ultra 56GB 556GB</h3>
+          <p class="price">
+            <span class="current-price">23.490.000đ</span>
+            <span class="old-price">33.990.000đ</span>
+          </p>
+          <p class="installment">Trả góp 0%</p>
+          <p class="info">HyTech-Student giảm thêm đến <b>600.000đ</b></p>
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+          <button class="wishlist">
+            <i class="fas fa-heart"></i> Yêu thích
+          </button>
+        </div>
+        <div class="product">
+          <div class="discount">Giảm 13%</div>
+          <img src="img/ip12 sanpham.jpg" alt="Samsung S25 Ultra" />
+          <h3>iphone 12 pro 12GB 256GB</h3>
+          <p class="price">
+            <span class="current-price">10.490.000đ</span>
+            <span class="old-price">13.990.000đ</span>
+          </p>
+          <p class="installment">Trả góp 0%</p>
+          <p class="info">HyTech-Student giảm thêm đến <b>600.000đ</b></p>
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+          <button class="wishlist">
+            <i class="fas fa-heart"></i> Yêu thích
+          </button>
+        </div>
+
+        <!-- Thêm các sản phẩm khác tương tự -->
+      </div>
+    </section>
+    <section class="product-section" style="color: aliceblue">
+      <h2>MÁY TÍNH NỔI BẬT NHẤT</h2>
+      <div class="filter-buttons">
+        <button>MSI</button>
+        <button>Lenovo</button>
+        <button>Mac</button>
+        <button>ThinkPad</button>
+        <button>ASUS</button>
+        <button>Xem tất cả</button>
+      </div>
+      <div class="product-list">
+        <!-- Sản phẩm 1 -->
+        <div class="product">
+          <div class="discount">Giảm 11%</div>
+          <img src="img/asus vivo sanpham.jpg" alt="iPhone 16 Pro Max" />
+          <h3>Máy tính Asus vivo15 | Chính hãng VN/A</h3>
+          <p class="price">
+            <span class="current-price">15.990.000đ</span>
+            <span class="old-price">20.990.000đ</span>
+          </p>
+          <p class="installment">Trả góp 0%</p>
+          <p class="info">
+            Không phí chuyển đổi khi trả góp 0% qua thẻ tín dụng
+          </p>
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+          <button class="wishlist">
+            <i class="fas fa-heart"></i> Yêu thích
+          </button>
+        </div>
+
+        <!-- Sản phẩm 2 -->
+        <div class="product">
+          <div class="discount">Giảm 13%</div>
+          <img src="img/thinkPad X1 yoga sanpham.jpg" alt="Samsung S25 Ultra" />
+          <h3>Máy tính ThinkPad X1 Yoga</h3>
+          <p class="price">
+            <span class="current-price">25.490.000đ</span>
+            <span class="old-price">29.990.000đ</span>
+          </p>
+          <p class="installment">Trả góp 0%</p>
+          <p class="info">HyTech-Student giảm thêm đến <b>1.000.000đ</b></p>
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+          <button class="wishlist">
+            <i class="fas fa-heart"></i> Yêu thích
+          </button>
+        </div>
+        <div class="product">
+          <div class="discount">Giảm 13%</div>
+          <img src="img/macbook 25 sanpham.jpg" alt="technospark" />
+          <h3>Máy tính MacBook 2025</h3>
+          <p class="price">
+            <span class="current-price">65.490.000đ</span>
+            <span class="old-price">33.990.000đ</span>
+          </p>
+          <p class="installment">Trả góp 0%</p>
+          <p class="info">HyTech-Student giảm thêm đến <b>600.000đ</b></p>
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+          <button class="wishlist">
+            <i class="fas fa-heart"></i> Yêu thích
+          </button>
+        </div>
+        <div class="product">
+          <div class="discount">Giảm 13%</div>
+          <img src="img/HP 15 sanpham.avif" alt="Poco x6" />
+          <h3>Máy tính HP 15</h3>
+          <p class="price">
+            <span class="current-price">17.890.000đ</span>
+            <span class="old-price">19.000.000đ</span>
+          </p>
+          <p class="installment">Trả góp 0%</p>
+          <p class="info">HyTech-Student giảm thêm đến <b>600.000đ</b></p>
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+          <button class="wishlist">
+            <i class="fas fa-heart"></i> Yêu thích
+          </button>
+        </div>
+        <div class="product">
+          <div class="discount">Giảm 13%</div>
+          <img src="img/del 15 sanpham.jpg" alt="Lenovo Y70" />
+          <h3>Máy tính Del inspiration 15</h3>
+          <p class="price">
+            <span class="current-price">9.490.000đ</span>
+            <span class="old-price">13.990.000đ</span>
+          </p>
+          <p class="installment">Trả góp 0%</p>
+          <p class="info">HyTech-Student giảm thêm đến <b>600.000đ</b></p>
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+          <button class="wishlist">
+            <i class="fas fa-heart"></i> Yêu thích
+          </button>
+        </div>
+        <div class="product">
+          <div class="discount">Giảm 13%</div>
+          <img src="img/mt soq sanpham.jpg" alt="Samsung S25 Ultra" />
+          <h3>Máy tính gaming lenovo LOQ</h3>
+          <p class="price">
+            <span class="current-price">23.490.000đ</span>
+            <span class="old-price">33.990.000đ</span>
+          </p>
+          <p class="installment">Trả góp 0%</p>
+          <p class="info">HyTech-Student giảm thêm đến <b>600.000đ</b></p>
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+          <button class="wishlist">
+            <i class="fas fa-heart"></i> Yêu thích
+          </button>
+        </div>
+        <div class="product">
+          <div class="discount">Giảm 13%</div>
+          <img src="img/acer sanpham.jpg" alt="Samsung S25 Ultra" />
+          <h3>Máy tính gaming Acer 25</h3>
+          <p class="price">
+            <span class="current-price">10.490.000đ</span>
+            <span class="old-price">13.990.000đ</span>
+          </p>
+          <p class="installment">Trả góp 0%</p>
+          <p class="info">HyTech-Student giảm thêm đến <b>600.000đ</b></p>
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+          <button class="wishlist">
+            <i class="fas fa-heart"></i> Yêu thích
+          </button>
+        </div>
+
+        <!-- Thêm các sản phẩm khác tương tự -->
+      </div>
+    </section>
+    <section class="product-section">
+      <h2 style="color: aliceblue">MÁY TÍNH ĐỂ BÀN NỔI BẬT NHẤT</h2>
+      <div class="filter-buttons">
+        <button>PC Gaming Neon</button>
+        <button>PC Gaming Yoru</button>
+        <button>PC Gaming Sage</button>
+        <button>PC Gaming Phoenix</button>
+        <button>PC Gaming Oman</button>
+        <button>Xem tất cả</button>
+      </div>
+      <div class="product-list">
+        <!-- Sản phẩm 1 -->
+        <div class="product">
+          <div class="discount">Giảm 11%</div>
+          <img src="img/PC 2018 sp.jpg" alt="iPhone 16 Pro Max" />
+          <h3>PC Gaming Neon 2018S| Chính hãng VN/A</h3>
+          <p class="price">
+            <span class="current-price">15.990.000đ</span>
+            <span class="old-price">20.990.000đ</span>
+          </p>
+          <p class="installment">Trả góp 0%</p>
+          <p class="info">
+            Không phí chuyển đổi khi trả góp 0% qua thẻ tín dụng
+          </p>
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+          <button class="wishlist">
+            <i class="fas fa-heart"></i> Yêu thích
+          </button>
+        </div>
+
+        <!-- Sản phẩm 2 -->
+        <div class="product">
+          <div class="discount">Giảm 13%</div>
+          <img src="img/PC 2019 sp.jpg" alt="Samsung S25 Ultra" />
+          <h3>PC Gaming Yorua SS2019Plus</h3>
+          <p class="price">
+            <span class="current-price">25.490.000đ</span>
+            <span class="old-price">29.990.000đ</span>
+          </p>
+          <p class="installment">Trả góp 0%</p>
+          <p class="info">HyTech-Student giảm thêm đến <b>1.000.000đ</b></p>
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+          <button class="wishlist">
+            <i class="fas fa-heart"></i> Yêu thích
+          </button>
+        </div>
+        <div class="product">
+          <div class="discount">Giảm 13%</div>
+          <img src="img/PC 2020 sp.avif" alt="technospark" />
+          <h3>PC VIP2020S</h3>
+          <p class="price">
+            <span class="current-price">65.490.000đ</span>
+            <span class="old-price">83.990.000đ</span>
+          </p>
+          <p class="installment">Trả góp 0%</p>
+          <p class="info">HyTech-Student giảm thêm đến <b>600.000đ</b></p>
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+          <button class="wishlist">
+            <i class="fas fa-heart"></i> Yêu thích
+          </button>
+        </div>
+        <div class="product">
+          <div class="discount">Giảm 13%</div>
+          <img src="img/PC 2021 sp.jpg" alt="Poco x6" />
+          <h3>PC Phoenix S2021S UlRra</h3>
+          <p class="price">
+            <span class="current-price">37.890.000đ</span>
+            <span class="old-price">39.000.000đ</span>
+          </p>
+          <p class="installment">Trả góp 0%</p>
+          <p class="info">HyTech-Student giảm thêm đến <b>600.000đ</b></p>
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+          <button class="wishlist">
+            <i class="fas fa-heart"></i> Yêu thích
+          </button>
+        </div>
+        <div class="product">
+          <div class="discount">Giảm 13%</div>
+          <img src="img/PC 2023 sp.jpg" alt="Lenovo Y70" />
+          <h3>PC VIP S2022S MegaUltra</h3>
+          <p class="price">
+            <span class="current-price">99.490.000đ</span>
+            <span class="old-price">103.990.000đ</span>
+          </p>
+          <p class="installment">Trả góp 0%</p>
+          <p class="info">HyTech-Student giảm thêm đến <b>600.000đ</b></p>
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+          <button class="wishlist">
+            <i class="fas fa-heart"></i> Yêu thích
+          </button>
+        </div>
+        <div class="product">
+          <div class="discount">Giảm 13%</div>
+          <img src="img/PC 2024 sp.jpg" alt="Samsung S25 Ultra" />
+          <h3>PC Gaming S2024 TeraBy</h3>
+          <p class="price">
+            <span class="current-price">23.490.000đ</span>
+            <span class="old-price">33.990.000đ</span>
+          </p>
+          <p class="installment">Trả góp 0%</p>
+          <p class="info">HyTech-Student giảm thêm đến <b>600.000đ</b></p>
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+          <button class="wishlist">
+            <i class="fas fa-heart"></i> Yêu thích
+          </button>
+        </div>
+        <div class="product">
+          <div class="discount">Giảm 13%</div>
+          <img src="img/PC 2025 sp.webp" alt="Samsung S25 Ultra" />
+          <h3>PC 2025 plus Mega Penta</h3>
+          <p class="price">
+            <span class="current-price">10.490.000đ</span>
+            <span class="old-price">13.990.000đ</span>
+          </p>
+          <p class="installment">Trả góp 0%</p>
+          <p class="info">HyTech-Student giảm thêm đến <b>600.000đ</b></p>
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+          <button class="wishlist">
+            <i class="fas fa-heart"></i> Yêu thích
+          </button>
+        </div>
+
+        <!-- Thêm các sản phẩm khác tương tự -->
+      </div>
+    </section>
+  </body>
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section about">
+        <h3>Về chúng tôi</h3>
+        <p>Hytechzone chuyên cung cấp các thiết bị công nghệ hiện đại.</p>
+      </div>
+      <div class="footer-section contact">
+        <h3>Liên hệ</h3>
+        <p>Email: Techperspace@gmail.com</p>
+        <p>Hotline: 078 329 6329</p>
+      </div>
+      <div class="footer-section social">
+        <h3>Theo dõi chúng tôi</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</html>

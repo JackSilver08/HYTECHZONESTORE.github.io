@@ -1,0 +1,214 @@
+/* Định dạng tổng thể */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* ---------------------- HEADER ---------------------- */
+header {
+  background-color: #3991efd5;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo img {
+  width: 60px; /* Tăng kích thước nhưng không làm header to */
+  max-height: 50px; /* Giữ chiều cao không vượt quá header */
+  object-fit: contain; /* Đảm bảo ảnh không bị méo */
+}
+
+.forum-title {
+  font-size: 30px;
+  font-weight: bold;
+  flex-grow: 1;
+  text-align: center;
+}
+
+/* ---------------------- SIDEBAR ---------------------- */
+.sidebar {
+  width: 250px;
+  background: white;
+  padding: 20px;
+  border-right: 1px solid #ddd;
+  position: fixed;
+  top: 60px;
+  left: 0;
+  height: calc(100vh - 60px);
+  overflow-y: auto;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #276ad5;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar ul li {
+  margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+  transition: all 0.2s ease;
+}
+
+.sidebar ul li a:hover {
+  background-color: #276ad5;
+  color: white;
+}
+
+/* ---------------------- NỘI DUNG BÀI VIẾT ---------------------- */
+.container {
+  display: flex;
+  max-width: 1200px;
+  margin: 80px auto 0;
+  padding: 20px;
+}
+
+/* Khu vực bài viết */
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Định dạng từng bài viết */
+.post {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.post-header .avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.post h3 {
+  font-size: 18px;
+  color: #333;
+}
+
+.post p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.post img {
+  width: 100%;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+/* Nút tương tác */
+.post-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.post-actions button {
+  background: #276ad5;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.post-actions button:hover {
+  background: #1a4b8a;
+}
+
+/* ---------------------- FOOTER ---------------------- */
+footer {
+  background-color: cyan;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* ---------------------- RESPONSIVE ---------------------- */
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    position: fixed;
+    z-index: 999;
+  }
+
+  .sidebar.active {
+    transform: translateX(0);
+  }
+
+  .container {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .main-content {
+    width: 100%;
+  }
+
+  .sidebar-toggle {
+    display: block;
+    position: fixed;
+    top: 70px;
+    left: 10px;
+    z-index: 1001;
+    background-color: #276ad5;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+}

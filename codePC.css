@@ -1,0 +1,111 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Chiều cao full màn hình */
+  margin: 0;
+  background: linear-gradient(
+    to bottom,
+    #82c4ff,
+    #002855
+  ); /* Gradient xanh đậm hơn */
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 350px;
+  text-align: center;
+}
+
+header {
+  background: linear-gradient(
+    to right,
+    #1e3c72,
+    #2a5298
+  ); /* Gradient xanh dương */
+  color: white;
+  padding: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.container {
+  display: flex;
+  justify-content: center; /* Căn giữa nội dung */
+  align-items: flex-start;
+  margin: 80px auto 50px; /* Đẩy toàn bộ nội dung xuống dưới header */
+  max-width: 1000px;
+  padding-left: 20px;
+}
+
+.form-container,
+.info-container {
+  width: 60%; /* Thu nhỏ một chút để không chiếm hết màn hình */
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgb(81, 163, 225);
+  text-align: justify;
+  min-width: 350px;
+  line-height: 1.8;
+}
+.form-container {
+  width: 450px; /* Tăng chiều rộng form */
+  padding: 30px; /* Tăng khoảng cách bên trong */
+  font-size: 16px; /* Chữ lớn hơn */
+}
+
+.form-container input {
+  width: 100%; /* Input rộng ra theo form */
+  height: 40px; /* Ô nhập cao hơn */
+  font-size: 14px;
+}
+
+.form-container button {
+  width: 100%;
+  height: 45px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
+}
+
+input,
+button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button {
+  background-color: #276ad5;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1e4fa1;
+}
